@@ -15,10 +15,12 @@ Testate poi i vostri oggetti Prodotto, istanziandoli e provando ad interagirci c
 
 
 using CSharpShop;
+using System.Linq.Expressions;
 
-Prodotto_Classe prodotto = new Prodotto_Classe();
 
-prodotto.SetPrezzo(Convert.ToDouble(Console.ReadLine()));
-prodotto.SetIva(float.Parse(Console.ReadLine()));
+
+
+Prodotto_Classe prodotto = new Prodotto_Classe("banana",5,4,"casco di banane molto buone e radioattive");
+
 
 prodotto.StampaProdottoASchermo();

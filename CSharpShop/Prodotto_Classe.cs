@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace CSharpShop {
     public class Prodotto_Classe {
-        private string codice;
+        private int codice;
         private string Nome;
         private string descrizione;
         private double prezzo;
         private float iva;
 
-
+        public Prodotto_Classe(string nome, double prezzo, float iva, string descrizione="") {
+            this.codice = this.SetCodice();
+            this.Nome = nome;
+            this.descrizione = descrizione;
+            this.prezzo = prezzo;
+            this.iva = iva;
+        }
 
         public void SetNome(string nome) {
             this.Nome = nome;
@@ -45,12 +51,21 @@ namespace CSharpShop {
         public float GetIva() {
             return this.iva;
         }
+        private int SetCodice() {
+            Random number = new Random();
+           return number.Next(0, 100000000);
+        }
+        public int GetCodice() {
+            return this.codice;
+        }
         public void StampaProdottoASchermo() {
             Console.WriteLine("------------------");
             Console.WriteLine($"Nome del prodotto: {this.Nome}");
             Console.WriteLine($"Descrizione: {this.descrizione}");
             Console.WriteLine($"prezzo senza iva: {this.prezzo} euro");
-            Console.WriteLine($"prezzo con iva: {this.CalcoloPrezzoConIva()}");
+            Console.WriteLine($"iva prodotto: {this.iva} %");
+            Console.WriteLine($"prezzo con iva: {this.CalcoloPrezzoConIva()} euro");
+            Console.WriteLine($"codice prodotto: {this.codice}{this.Nome}");
             Console.WriteLine("------------------");
         }
     }
