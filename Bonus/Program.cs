@@ -6,11 +6,11 @@ Stampate poi l’elenco dei vostri prodotti che avete previsto nel negozio.*/
 
 using Bonus;
 
-var prodotto1 = new Prodotto_classe("Banana",5,4,"bananane molto buone");
-var prodotto2 = new Prodotto_classe("Pomodori", 4.3, 4, "pomodori belli rossi");
-var prodotto3 = new Prodotto_classe("Gelato", 10.40, 10,"Gelato al fior di latte");
+var prodotto1 = new Prodotto("Banana",5,4,"bananane molto buone");
+var prodotto2 = new Prodotto("Pomodori", 4.3, 4, "pomodori belli rossi");
+var prodotto3 = new Prodotto("Gelato", 10.40, 10,"Gelato al fior di latte");
 
-var Wallmart=new List<Prodotto_classe>() { prodotto1,prodotto2,prodotto3};
+var Wallmart=new List<Prodotto>() { prodotto1,prodotto2,prodotto3};
 
 foreach(var articolo in Wallmart) {
     articolo.StampaProdottoASchermo();

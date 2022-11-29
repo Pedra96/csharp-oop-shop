@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CSharpShop {
-    public class Prodotto_Classe {
+    public class Prodotto {
         private int codice;
         private string Nome;
         private string descrizione;
         private double prezzo;
         private float iva;
 
-        public Prodotto_Classe(string nome, double prezzo, float iva, string descrizione="") {
+        public Prodotto(string nome, double prezzo, float iva, string descrizione="") {
             this.codice = this.SetCodice();
             this.Nome = nome;
             this.descrizione = descrizione;

@@ -20,7 +20,7 @@ using System.Linq.Expressions;
 
 
 
-Prodotto_Classe prodotto = new Prodotto_Classe("banana",5,4,"casco di banane molto buone e radioattive");
+Prodotto prodotto = new Prodott("banana",5,4,"casco di banane molto buone e radioattive");
 
 
 prodotto.StampaProdottoASchermo();

@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Bonus {
-    internal class Prodotto_classe {
+    public class Prodotto {
 
         private string codice;
         private string Nome;
         private string descrizione;
         private double prezzo;
         private float iva;
-        public Prodotto_classe(string nome, double prezzo, float iva, string descrizione = "") {
+        public Prodotto(string nome, double prezzo, float iva, string descrizione = "") {
             this.codice = this.SetCodice();
             this.Nome = nome;
             this.descrizione = descrizione;
