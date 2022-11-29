@@ -12,3 +12,13 @@ Gli altri attributi siano accessibili sia in lettura che in scrittura
 Il prodotto esponga sia un metodo per avere il prezzo base che uno per avere il prezzo comprensivo di iva.
 Il prodotto esponga un metodo per avere il nome esteso, ottenuto concatenando codice + nome
 Testate poi i vostri oggetti Prodotto, istanziandoli e provando ad interagirci con loro per testare tutti i metodi che avete previsto e implementato.*/
+
+
+using CSharpShop;
+
+Prodotto_Classe prodotto = new Prodotto_Classe();
+
+prodotto.SetPrezzo(Convert.ToDouble(Console.ReadLine()));
+prodotto.SetIva(float.Parse(Console.ReadLine()));
+
+prodotto.StampaProdottoASchermo();
